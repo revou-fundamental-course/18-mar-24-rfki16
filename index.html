@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment - Achmad Rifki</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header-container">
+    <img src="./assets/trav.jpg" alt="" class="logo-icon">
+    <section class="nav-container">
+      <button>Home</button>
+      <button>Our Pages</button>
+      <button>Call Us</button>
+    </section>
+  </header>
+  <hr>
+
+  <section class="section-container">
+    <header>
+      <h1>Your Trusted Travel Agent's</h1>
+      <p>My Trip My Adventure</p>
+    </header>
+
+    <div class="section-content-container">
+      <div style="height: 200px; width: 100%; background-color: antiquewhite; margin-right: 16px;">
+
+        <div class="gambar">
+          <img class="img-slideshow"
+            src="https://cdn0-production-images-kly.akamaized.net/tQHM7yL-8c0V4u7H9pF_LugZiVo=/800x450/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/2753696/original/053663800_1552880270-2.jpg"
+            alt="" srcset="" width="670px" height="300px">
+
+          <img class="img-slideshow"
+            src="https://akcdn.detik.net.id/community/media/visual/2020/12/10/pulau-misool-raja-ampat-indonesia_169.jpeg?w=620"
+            alt="" width="670px" height="300px">
+
+          <img class="img-slideshow"
+            src="https://asset.kompas.com/crops/SJBld7b2CtJC5zJMlFbu1zKopZY=/1x319:1024x1001/750x500/data/photo/2022/09/04/6314d47545313.jpg"
+            alt="" srcset="" width="670px" height="300px">
+
+          <button onclick="plusDivs(-1)">Previous</button>
+          <button onclick="plusDivs(1)">Next</button>
+        </div>
+
+        <script>
+          var slideIndex = 1;
+          showDivs(slideIndex);
+
+          function plusDivs(n) {
+            showDivs(slideIndex += n);
+          }
+
+          function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("img-slideshow");
+            if (n > x.length) { slideIndex = 1 }
+            else if (n < 1) { slideIndex = x.length };
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+          }
+
+          setInterval(() => {
+            // jalankan fungsi
+            plusDivs(1);
+
+          }, 3000)
+
+        </script>
+
+
+
+      </div>
+
+      <div style="height: 200px; width: 100%; background-color: aliceblue; margin-left: 16px;">
+        <form name="message-form" onsubmit="return validateForm()">
+          <label for="name-input">Your Name</label><br>
+          <input type="text" id="name-input" name="name-input" class="name-input"><br>
+          <p id="error-name"></p> <br>
+
+          <label for="email">Email Address</label><br>
+          <input type="email" name="email" id="email" class="name-input"><br>
+          <p id="error-name"></p>
+
+          <label for="job">What are you interested in?</label><br>
+          <select name="job" id="job">
+            <option value="fe">Front End Developer</option>
+            <option value="be">Back End Developer</option>
+            <option value="devops">Devops Engineer</option>
+          </select><br>
+          <p id="error-name"></p>
+
+
+
+
+          <button type="submit" id="submit">Submit</button>
+
+        </form>\
+      </div>
+    </div>
+  </section>
+
+</body>
+
+<script src="js/script.js"></script>
+
+</html>

@@ -1,0 +1,70 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+hr {
+    margin: 0px;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nav-container>button {
+    height: 25px;
+
+}
+
+.section-container {
+    padding-top: 48px;
+    padding-bottom: 24px;
+}
+
+.section-container>header {
+    text-align: center;
+}
+
+.section-content-container {
+    display: flex;
+}
+
+.gambar {
+    width: 80px;
+    height: 40px;
+}
+
+.name-input,
+#job {
+    height: 24px;
+    width: 30%;
+    border-radius: 16px;
+}
+
+
+
+#send {
+    height: 24px;
+    width: 50px;
+    border-radius: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+}
